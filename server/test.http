@@ -1,0 +1,62 @@
+@uri = http://localhost:3000/api
+@json = Content-Type: application/json
+GET {{uri}}/citylist
+###
+POST {{uri}}/city
+Content-Type:application/json
+
+{
+    "title":"产品4"
+}
+
+###注册
+POST  {{uri}}/register
+{{json}}
+
+{
+    "username":"user2",
+    "password":"123456"
+}
+###
+GET  {{uri}}/users
+###登录
+POST  {{uri}}/login
+{{json}}
+
+{
+    "username":"user2",
+    "password":"123456"
+}
+
+###
+POST  {{uri}}/Film
+{{json}}
+
+
+###
+GET  {{uri}}/celebrity/init
+
+###
+GET {{uri}}/news/init
+###
+GET {{uri}}/hotCelebrity/init
+###
+GET {{uri}}/cominglist/init
+
+
+###
+GET {{uri}}/hotWisheslist
+
+###
+GET {{uri}}/hotcominglist
+###
+GET {{uri}}/filmids
+###
+GET {{uri}}/classicFilm/init
+###
+GET {{uri}}/classicFilm/initOne
+###
+POST {{uri}}/classicfilms
+
+
+

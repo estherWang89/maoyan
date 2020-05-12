@@ -1,0 +1,219 @@
+@import './variables';
+//reset
+*{
+    box-sizing:border-box;
+    outline:none;
+}
+
+html{
+    font-size:14px;
+}
+
+body{
+    margin:0;
+    height:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background:white;
+    -webkit-font-smoothing:antialiased;
+}
+
+ul,li{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+//colors
+@each $colorkey,$color in $colors{
+    .text-#{$colorkey}{
+        color:$color;
+    }
+
+    .bg-#{$colorkey}{
+        background-color: $color;
+    }
+}
+
+@each $var in (left,center,right){
+    .text-#{$var}{
+        text-align:$var !important;
+    }
+}
+
+
+@each $key,$var in $border-directions{
+    .b-#{$key}{
+        border-#{$var}:1px solid $border-color;
+    }
+}
+
+@each $sizeKey,$size in $font-sizes{
+    .fs-#{$sizeKey}{
+        font-size:$size*$base-font-size;
+    }
+}
+
+.text-ellipsis{
+    display:inline-block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.w-100{
+    width:100%;
+}
+
+.w-95{
+    width:95%;
+}
+
+.h-100{
+    height:100%;
+}
+
+//flex
+.d-flex{
+    display:flex;
+}
+
+.flex-wrap{
+   flex-wrap:wrap; 
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+@each $jcKey,$value in $flex-jc{
+    .jc-#{$jcKey}{
+        justify-content:$value;
+    }
+}
+
+@each $aiKey,$value in $flex-ai{
+    .ai-#{$aiKey}{
+        align-items:$value;
+    }
+}
+
+.flex-1{
+    flex:1;
+}
+
+.flex-grow-1{
+    flex-grow:1;
+}
+
+@each $typeKey,$type in $spacing-types{
+    //m-1
+    @each $sizeKey,$size in $spacing-sizes{
+        //m-1:{margin:0.25rem}
+        .#{$typeKey}-#{$sizeKey}{
+            #{$type}:$size*$spacing-base-size;
+        }
+    }
+
+    @each $sizeKey,$size in $spacing-sizes{
+        //mx-1:{margin-left:0.25rem}
+        .#{$typeKey}x-#{$sizeKey}{
+            #{$type}-left:$size*$spacing-base-size;
+            #{$type}-right:$size*$spacing-base-size;
+        }
+            //my-1:{margin-top:0.25rem}
+        .#{$typeKey}y-#{$sizeKey}{
+            #{$type}-top:$size*$spacing-base-size;
+            #{$type}-bottom:$size*$spacing-base-size;
+        }
+    }
+
+     //mt-1
+     @each $dirKey,$direction in $spacing-directions {
+        @each $sizeKey,$size in $spacing-sizes {
+            //mt-1:{margin-top:0.25rem}
+            .#{$typeKey}#{$dirKey}-#{$sizeKey}{
+                #{$type}-#{$direction}:$size*$spacing-base-size;
+            }
+        }
+    }
+}
+
+//button
+.btn{
+    border:none;
+    border-radius:0.1429rem;
+    cursor:pointer;
+    width:68px;
+    height:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:map-get($colors,'white');
+    background-color:map-get($colors,'button');;
+    
+}
+
+  
+.nav{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width:100%;
+    height:50px;
+    z-index:999;
+    background:white;
+    display: flex;
+    li{
+        flex:1;
+        display:flex;
+        flex-direction: column;
+        text-align:center;
+        color:map-get($colors,'grey-2');
+        font-size:10px;
+        &.myActive{
+            color:map-get($colors,'tabBtn');
+        }
+    }
+
+}
+
+.fwb{
+    font-weight: bold;
+}
+
+.cityBtn{
+    width:28%;
+    height:31px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border:1px solid map-get($colors,'border-1');
+    border-radius: 2px;
+    
+   
+}
+
+a{
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.filmHead{
+    position: fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    z-index:1000;
+    .header{
+        background-color: map-get($colors, "header");
+        height:50px;
+        position:relative;
+        .moreBtn{
+            height:100%;
+            position: absolute;
+            top:0;
+            right:15px;
+        }
+    }
+    
+}

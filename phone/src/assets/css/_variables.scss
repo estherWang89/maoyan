@@ -1,0 +1,80 @@
+$colors:(
+    "tabBtn":#f03d37,
+    "header":#e54847,
+    "white":white,
+    "button":#ef4238,
+    "border-1":#e6e6e6,
+    "border":#d8d8d8,
+    "grey":#999,
+    "grey-1":#666,
+    "grey-2":#696969,
+    "grey-3":#777,
+    "grey-4":#ccc,
+    "dark-1":#333,
+    "dark":#222,
+    "black":#000,
+    "bgc":#ebebeb,
+    "bgc-1": #f5f5f5,
+    "yellow-1":#faaf00,
+);
+$border-color:map-get($colors,'border-1');
+$base-font-size:1rem;
+$font-sizes:(
+    xs:0.8571,//12px
+    sm:0.9286,//13px
+    md:1,//14px
+    lg:1.0714,//15px;
+    xl:1.1429,//16px
+    xxl:1.2143,//17px
+    xxxl:1.2857,//18px
+    slg:1.4286,//20px
+    mlg:1.5714,//22px
+    vlg:1.7857,//25px
+    lgst:2.8571,//30px
+);
+
+$flex-jc:(
+    start:flex-start,
+    end:flex-end,
+    center:center,
+    between:space-between,
+    around:space-around,
+);
+
+$flex-ai:(
+    start:flex-start,
+    end:flex-end,
+    center:center,
+    stretch:stretch,
+);
+
+$spacing-base-size:1rem;
+$spacing-types:(
+    m:margin,
+    p:padding,
+);
+$spacing-directions:(
+    t:top,
+    r:right,
+    b:bottom,
+    l:left
+);
+
+$spacing-sizes:(
+    0:0,
+    1:0.25,
+    2:0.5,
+    3:0.75,
+    4:1,
+    5:1.5,
+    6:2,
+    7:3,
+);
+
+$border-directions:(
+    t:top,
+    r:right,
+    b:bottom,
+    l:left
+);
+
