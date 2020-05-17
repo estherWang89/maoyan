@@ -64,7 +64,6 @@ export default {
   },
   methods: {
     handleCities(cityList) {
-      // console.log(Object.prototype.toString.call(cityList))
       const letterArr = [];
       for (let i = 65; i <= 90; i++) {
         letterArr.push(String.fromCharCode(i));

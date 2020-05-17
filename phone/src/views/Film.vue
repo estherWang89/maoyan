@@ -27,11 +27,9 @@ export default {
       isAppShow:true,
       tabList: [
         {name:'热映',router:'/film/f-hot'},
-        // {name:'影院',router:'/cinema'},
         {name:'待映',router:'/film/commingsoon'},
         {name:'经典电影',router:'/film/classic'}
       ],
-      // selectIdx: 0,
       nowCityName: '建德',
       tabBarHeight:44,
     };
@@ -40,16 +38,7 @@ export default {
 
   mounted() {
     this.showLocalCity();
-    // window.onscroll = ()=>{
-    //   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    //    this.isAppShow = scrollTop <= this.$refs.tabBar.clientHeight;
-       
-    // }
   },
- 
-  // beforeDestory(){
-  //   window.onscroll = null;
-  // },
 
   methods: {
     showLocalCity() {

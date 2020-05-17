@@ -46,7 +46,6 @@ export default {
         } else {
            this.login(idx%2 === 0 ?'login':'register');
         }
-         
      },
 
      async login(resApi){
